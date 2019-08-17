@@ -5,8 +5,9 @@
     "libraryId": "f1bf3cb2-aad9-4529-bc77-339e61baaa3d",
     "environment": "spo",
     "packageManager": "npm",
-    "isCreatingSolution": true,
+    "isCreatingSolution": false,
     "isDomainIsolated": false,
-    "componentType": "webpart"
+    "componentType": "extension",
+    "extensionType": "ApplicationCustomizer"
   }
 }

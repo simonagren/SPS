@@ -9,12 +9,30 @@
           "manifest": "./src/webparts/spFxProvisioning/SpFxProvisioningWebPart.manifest.json"
         }
       ]
+    },
+    "sp-fx-provision-site-design-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/spFxProvisionSiteDesign/SpFxProvisionSiteDesignWebPart.js",
+          "manifest": "./src/webparts/spFxProvisionSiteDesign/SpFxProvisionSiteDesignWebPart.manifest.json"
+        }
+      ]
+    },
+    "sp-fx-panel-messages-application-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/spFxPanelMessages/SpFxPanelMessagesApplicationCustomizer.js",
+          "manifest": "./src/extensions/spFxPanelMessages/SpFxPanelMessagesApplicationCustomizer.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
     "SpFxProvisioningWebPartStrings": "lib/webparts/spFxProvisioning/loc/{locale}.js",
     "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js",
-    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js",
+    "SpFxProvisionSiteDesignWebPartStrings": "lib/webparts/spFxProvisionSiteDesign/loc/{locale}.js",
+    "SpFxPanelMessagesApplicationCustomizerStrings": "lib/extensions/spFxPanelMessages/loc/{locale}.js"
   }
 }
