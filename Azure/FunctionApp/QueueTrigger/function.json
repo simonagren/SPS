@@ -1,0 +1,12 @@
+{
+  "bindings": [
+    {
+      "name": "myQueueItem",
+      "type": "queueTrigger",
+      "direction": "in",
+      "queueName": "spsprovisionqueue",
+      "connection": "spsprovision_STORAGE"
+    }
+  ],
+  "scriptFile": "../dist/QueueTrigger/index.js"
+}
