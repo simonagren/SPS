@@ -6,6 +6,11 @@
       "direction": "in",
       "queueName": "spsprovisionqueue",
       "connection": "spsprovision_STORAGE"
+    },
+    {
+      "name": "starter",
+      "type": "orchestrationClient",
+      "direction": "in"
     }
   ],
   "scriptFile": "../dist/QueueTrigger/index.js"

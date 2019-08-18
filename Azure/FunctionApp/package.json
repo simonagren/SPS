@@ -11,9 +11,15 @@
     "build:production": "npm run prestart && npm prune --production",
     "test": "echo \"No tests yet...\""
   },
-  "dependencies": {},
+  "dependencies": {
+    "durable-functions": "^1.2.2",
+    "node-powershell": "^4.0.0",
+    "socket.io-client": "^2.2.0"
+  },
   "devDependencies": {
     "@azure/functions": "^1.0.2-beta2",
+    "@types/node-powershell": "^3.1.0",
+    "@types/socket.io-client": "^1.4.32",
     "typescript": "^3.3.3"
   }
 }
