@@ -1,0 +1,220 @@
+{
+  "luis_schema_version": "3.2.0",
+  "versionId": "0.1",
+  "name": "Airline Reservation",
+  "desc": "A LUIS model that uses intent and entities.",
+  "culture": "en-us",
+  "tokenizerVersion": "1.0.0",
+  "intents": [
+    {
+      "name": "Create site"
+    },
+    {
+      "name": "Create teams"
+    },
+    {
+      "name": "Cancel"
+    },
+    {
+      "name": "None"
+    }
+  ],
+  "entities": [
+    {
+      "name": "Title",
+      "roles": []
+    }
+  ],
+  "composites": [
+    {
+      "name": "Site",
+      "children": [
+        "SiteType"
+      ],
+      "roles": []
+    }
+  ],
+  "closedLists": [
+    {
+      "name": "SiteType",
+      "subLists": [
+        {
+          "canonicalForm": "Modern Team Site",
+          "list": [
+            "Modern Team Site"
+          ]
+        },
+        {
+          "canonicalForm": "Communication Site",
+          "list": [
+            "Communication Site"
+          ]
+        }
+      ],
+      "roles": []
+    }
+  ],
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "prebuiltEntities": [
+    {
+      "name": "email",
+      "roles": []
+    }
+  ],
+  "model_features": [],
+  "regex_features": [],
+  "patterns": [],
+  "utterances": [
+    {
+      "text": "create a modern team site with title sitename and owner simon@mail.com",
+      "intent": "Create site",
+      "entities": [
+        {
+          "entity": "Site",
+          "startPos": 9,
+          "endPos": 24
+        },
+        {
+          "entity": "Title",
+          "startPos": 37,
+          "endPos": 44
+        }
+      ]
+    },
+    {
+      "text": "create a communications site with title projects",
+      "intent": "Create site",
+      "entities": [
+        {
+          "entity": "Site",
+          "startPos": 9,
+          "endPos": 27
+        },
+        {
+          "entity": "Title",
+          "startPos": 40,
+          "endPos": 47
+        }
+      ]
+    },
+    {
+      "text": "create a communications site with owner simon.agren@mail.com",
+      "intent": "Create site",
+      "entities": [
+        {
+          "entity": "Site",
+          "startPos": 9,
+          "endPos": 27
+        }
+      ]
+    },
+    {
+      "text": "bye",
+      "intent": "Cancel",
+      "entities": []
+    },
+    {
+      "text": "cancel booking",
+      "intent": "Cancel",
+      "entities": []
+    },
+    {
+      "text": "exit",
+      "intent": "Cancel",
+      "entities": []
+    },
+    {
+      "text": "modern team site",
+      "intent": "Create site",
+      "entities": [
+        {
+          "entity": "Site",
+          "startPos": 0,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "communications site",
+      "intent": "Create site",
+      "entities": [
+        {
+          "entity": "Site",
+          "startPos": 0,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "modern team site with title sitename and owner simon@mail.com",
+      "intent": "Create site",
+      "entities": [
+        {
+          "entity": "Site",
+          "startPos": 0,
+          "endPos": 15
+        },
+        {
+          "entity": "Title",
+          "startPos": 28,
+          "endPos": 35
+        }
+      ]
+    },
+    {
+      "text": "create a Microsoft teams team with title teamsname and owner simon@mail.com",
+      "intent": "Create teams",
+      "entities": [
+        {
+          "entity": "Title",
+          "startPos": 41,
+          "endPos": 49
+        }
+      ]
+    },
+    {
+      "text": "create a Microsoft teams team with title othername",
+      "intent": "Create teams",
+      "entities": [
+        {
+          "entity": "Title",
+          "startPos": 41,
+          "endPos": 49
+        }
+      ]
+    },
+    {
+      "text": "create a Microsoft teams team with owner simon@mail.com",
+      "intent": "Create teams",
+      "entities": []
+    },
+    {
+      "text": "Teams team",
+      "intent": "Create teams",
+      "entities": []
+    },
+    {
+      "text": "Microsoft teams",
+      "intent": "Create teams",
+      "entities": []
+    },
+    {
+      "text": "Microsoft teams team with title teamsname and owner simon@mail.com",
+      "intent": "Create teams",
+      "entities": [
+        {
+          "entity": "Title",
+          "startPos": 32,
+          "endPos": 40
+        }
+      ]
+    },
+    {
+      "text": "ignore",
+      "intent": "Cancel",
+      "entities": []
+    }
+  ],
+  "settings": []
+}

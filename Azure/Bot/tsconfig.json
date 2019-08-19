@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "composite": true,
+    "declaration": true,
+    "target": "es2016",
+    "module": "commonjs",
+    "outDir": "./lib",
+    "rootDir": "./src",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "rootDirs": [
+      "./src",
+      "./resources"
+    ],
+    "sourceMap": true
+  },
+  "include": [
+    "./src/**/*",
+    "./src/**/*.json"
+  ],
+}
