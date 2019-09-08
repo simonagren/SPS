@@ -1,0 +1,52 @@
+{
+    "type": "AdaptiveCard",
+    "body": [
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "size": "Medium",
+                    "weight": "Bolder",
+                    "text": "Hi I'm Provisioning Bot"
+                },
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Nice to meet you. I am a bot to help you provision a new SharePoint site. I am using natural language processing and adaptive cards in waterfall-dialogs. I am also using Bot Framework 4.",
+                                    "wrap": true,
+                                    "horizontalAlignment": "Left"
+                                },
+                                {
+                                    "type": "Image",
+                                    "altText": "",
+                                    "url": "https://docs.botframework.com/static/devportal/client/images/bot-framework-default.png"
+                                }
+                            ],
+                            "width": "stretch"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "size": "Medium",
+                    "weight": "Bolder",
+                    "text": "Start by saying Hi!",
+                    "wrap": true
+                }
+            ]
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.0"
+}

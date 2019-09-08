@@ -1,0 +1,81 @@
+{
+    "type": "AdaptiveCard",
+    "body": [
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "size": "Medium",
+                    "weight": "Bolder",
+                    "text": "Hi I'm Provisioning Bot"
+                },
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "items": [
+                                {
+                                    "type": "Image",
+                                    "style": "Person",
+                                    "url": "https://docs.botframework.com/static/devportal/client/images/bot-framework-default.png",
+                                    "size": "Small"
+                                }
+                            ],
+                            "width": "auto"
+                        },
+                        {
+                            "type": "Column",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Today I will help you create a SharePoint site or a Microsoft Team. Write something simple or a full sentence and I will extract some of the details you provided.",
+                                    "wrap": true
+                                }
+                            ],
+                            "width": "stretch"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "size": "Medium",
+                    "weight": "Bolder",
+                    "text": "Start with something like:",
+                    "wrap": true
+                }
+            ]
+        },
+        {
+            "type": "TextBlock",
+            "text": "- 'Create a site'\n- 'Create Microsoft Teams'\n- 'Communications site' or 'modern team site' or 'Project site'\n- 'Create a modern team site with title <title> and owner <name@mail.com>\n",
+            "wrap": true
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.Submit",
+            "title": "Create a SharePoint site",
+            "data": {
+                "messageText": "Create a SharePoint site",
+                "isFromAdaptiveCard": true
+            }
+        },
+        {
+            "type": "Action.Submit",
+            "title": "Create a Microsoft Teams team",
+            "data": {
+                "messageText": "Create a Microsoft Teams team",
+                "isFromAdaptiveCard": true
+            }
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.0"
+}

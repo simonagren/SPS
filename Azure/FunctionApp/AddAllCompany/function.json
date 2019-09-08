@@ -1,0 +1,10 @@
+{
+  "bindings": [
+    {
+      "name": "queueObj",
+      "type": "activityTrigger",
+      "direction": "in"
+    }
+  ],
+  "scriptFile": "../dist/AddAllCompany/index.js"
+}

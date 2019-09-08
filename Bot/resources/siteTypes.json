@@ -1,0 +1,94 @@
+{
+    "cards": [
+        {
+            "type": "AdaptiveCard",
+            "body": [
+                {
+                    "type": "TextBlock",
+                    "size": "Large",
+                    "weight": "Bolder",
+                    "text": "Collaboration Team Site"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "A SharePoint team site connects you and your team to the content, information, and apps you rely on every day",
+                    "isSubtle": true,
+                    "wrap": true
+                }
+            ],
+            "actions": [
+                {
+                    "type": "Action.Submit",
+                    "title": "Select",
+                    "data": {
+                        "messageText": "Collaboration",
+                        "isFromAdaptiveCard": true
+                    }
+                }
+            ],
+            "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+            "version": "1.0",
+            "speak": "<s>Your  meeting about \"Adaptive Card design session\"<break strength='weak'/> is starting at 12:30pm</s><s>Do you want to snooze <break strength='weak'/> or do you want to send a late notification to the attendees?</s>"
+        },
+        {
+            "type": "AdaptiveCard",
+            "body": [
+                {
+                    "type": "TextBlock",
+                    "size": "Large",
+                    "weight": "Bolder",
+                    "text": "Communications Site"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "Communication sites are focused on broadcasting or communicating a message to a wide audience. In a team site, most users contribute content",
+                    "isSubtle": true,
+                    "wrap": true
+                }
+            ],
+            "actions": [
+                {
+                    "type": "Action.Submit",
+                    "title": "Select",
+                    "data": {
+                        "messageText": "Communication",
+                        "isFromAdaptiveCard": true
+                    }
+                }
+            ],
+            "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+            "version": "1.0",
+            "speak": ""
+        },
+        {
+            "type": "AdaptiveCard",
+            "body": [
+                {
+                    "type": "TextBlock",
+                    "size": "Large",
+                    "weight": "Bolder",
+                    "text": "Project Site"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "A Project site connects you and your team to a specific team site suitable for projects",
+                    "isSubtle": true,
+                    "wrap": true
+                }
+            ],
+            "actions": [
+                {
+                    "type": "Action.Submit",
+                    "title": "Select",
+                    "data": {
+                        "messageText": "Project",
+                        "isFromAdaptiveCard": true
+                    }
+                }
+            ],
+            "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+            "version": "1.0",
+            "speak": "<s>Your  meeting about \"Adaptive Card design session\"<break strength='weak'/> is starting at 12:30pm</s><s>Do you want to snooze <break strength='weak'/> or do you want to send a late notification to the attendees?</s>"
+        }
+    ]
+}

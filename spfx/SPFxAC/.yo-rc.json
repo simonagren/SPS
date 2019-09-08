@@ -1,0 +1,14 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "isCreatingSolution": true,
+    "environment": "spo",
+    "whichFolder": "subdir",
+    "version": "1.9.1",
+    "libraryName": "sp-fx-panel-messages",
+    "libraryId": "209a6d16-8752-4a7c-a577-9d69fb4d4c7c",
+    "packageManager": "npm",
+    "isDomainIsolated": false,
+    "componentType": "extension",
+    "extensionType": "ApplicationCustomizer"
+  }
+}

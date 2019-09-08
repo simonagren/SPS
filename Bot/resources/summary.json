@@ -1,0 +1,123 @@
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.0",
+    "speak": "<s>Flight KL0605 to San Fransisco has been delayed.</s><s>It will not leave until 10:10 AM.</s>",
+    "body": [
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "size": "Small",
+                            "url": "https://docs.botframework.com/static/devportal/client/images/bot-framework-default.png"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Request summary",
+                            "horizontalAlignment": "Center",
+                            "spacing": "None",
+                            "size": "Large",
+                            "color": "Accent"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "separator": true,
+            "spacing": "Medium",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Title",
+                            "spacing": "Small",
+                            "weight": "Bolder"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Description",
+                            "spacing": "Small",
+                            "weight": "Bolder"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Owner",
+                            "spacing": "Small",
+                            "weight": "Bolder"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Type",
+                            "spacing": "Small",
+                            "weight": "Bolder"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Alias",
+                            "spacing": "Small",
+                            "weight": "Bolder"
+                        }
+                    ],
+                    "spacing": "None"
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "$Title",
+                            "horizontalAlignment": "Left",
+                            "spacing": "Small",
+                            "wrap": true
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "$Desc",
+                            "horizontalAlignment": "Left",
+                            "spacing": "Small",
+                            "wrap": true
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "$Owner",
+                            "horizontalAlignment": "Left",
+                            "spacing": "Small",
+                            "wrap": true
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "$Type",
+                            "horizontalAlignment": "Left",
+                            "spacing": "Small",
+                            "wrap": true
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "$Alias",
+                            "horizontalAlignment": "Left",
+                            "spacing": "Small",
+                            "wrap": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

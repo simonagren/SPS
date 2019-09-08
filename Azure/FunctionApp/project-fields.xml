@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2018/07/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=3.8.1904.0, Culture=neutral, PublicKeyToken=5e633289e95c321a" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-6AED7AAF75864AA396773F8C0651AA57">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-6AED7AAF75864AA396773F8C0651AA57" Version="1" BaseSiteTemplate="GROUP#0" Scope="RootSite">
+      <pnp:SiteFields>
+        <Field DisplayName="ProjectName" Type="Text" Required="TRUE" ID="{67ed7c22-5751-4310-8818-a64dc51baa4b}" SourceID="{e40adf80-728e-4d1d-a46c-131e0812f2f2}" StaticName="ProjectName" Name="ProjectName" Group="~Project Columns" />
+        <Field Type="Choice" DisplayName="Document Type" Required="FALSE" Format="Dropdown" StaticName="DocumentType" Name="DocumentType" ID="{feb9f14f-a26f-41ce-959e-a389afc5ac99}" SourceID="{e40adf80-728e-4d1d-a46c-131e0812f2f2}">
+          <Default>General Doc</Default>
+          <CHOICES>
+            <CHOICE>General Doc</CHOICE>
+            <CHOICE>Requirements</CHOICE>
+            <CHOICE>Design</CHOICE>
+            <CHOICE>TestPlan</CHOICE>
+            <CHOICE>Project Charter</CHOICE>
+          </CHOICES>
+        </Field>
+        <Field ID="{170A2CA8-D505-4A8B-8497-B96C39861889}" Name="UserLastDeletionTime" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="UserLastDeletionTime" Group="_Hidden" DisplayName="User Last Deletion Time" ReadOnly="TRUE" ReadOnlyEnforced="TRUE" Type="DateTime" FromBaseType="TRUE" />
+      </pnp:SiteFields>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

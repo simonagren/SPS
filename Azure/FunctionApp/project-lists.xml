@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2018/07/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=3.8.1904.0, Culture=neutral, PublicKeyToken=5e633289e95c321a" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-78E803193191452F8971A785C71139A0">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-78E803193191452F8971A785C71139A0" Version="1" BaseSiteTemplate="GROUP#0" Scope="RootSite">
+      <pnp:Lists>
+                <pnp:ListInstance Title="Project Documents" Description="" DocumentTemplate="{site}/Project Documents/Forms/template.dotx" TemplateType="101" Url="Project Documents" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="500" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-e717-4e80-aa17-d0c71b360101" ContentTypesEnabled="true" EnableAttachments="false" DefaultDisplayFormUrl="{site}/Project Documents/Forms/DispForm.aspx" DefaultEditFormUrl="{site}/Project Documents/Forms/EditForm.aspx" DefaultNewFormUrl="{site}/Project Documents/Forms/Upload.aspx" ImageUrl="/_layouts/15/images/itdl.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x0101" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0101004278F7771424A441BFB841233C1192C8" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{39E14EFE-A2EF-4D61-B1B0-B3325E10A663}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="Alla dokument" Url="/sites/test6/Project Documents/Forms/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="FileLeafRef" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Editor" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="67ed7c22-5751-4310-8818-a64dc51baa4b" Name="ProjectName" DisplayName="Project Name" />
+            <pnp:FieldRef ID="feb9f14f-a26f-41ce-959e-a389afc5ac99" Name="DocumentType" DisplayName="DocumentType" />
+          </pnp:FieldRefs>
+          <pnp:Webhooks>
+            <pnp:Webhook ServerNotificationUrl="https://3-westeurope1.pushp.svc.ms/notifications?token=w3-70fe6abc-bffc-4186-a212-ac9aed6dbb4c" ExpiresInDays="1" />
+          </pnp:Webhooks>
+        </pnp:ListInstance>
+              </pnp:Lists>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>
