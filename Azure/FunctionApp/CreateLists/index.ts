@@ -20,32 +20,36 @@ const activityFunction: AzureFunction = async function (context: Context, queueO
 
     try {
 
+        // Emit update
         service.emitUpdate(false, "Creating lists", room, socket, conversationId);
 
-        ps.addCommand('Import-Module C:/Users/sagren/Desktop/SharePointPnPPowerShellOnline/3.12.1908.1/SharePointPnPPowerShellOnline.psd1 -WarningAction SilentlyContinue');        
+        // Import module
+        ps.addCommand('Import-Module C:/Users/sagren/dev/sps/azure/FunctionApp/SharePointPnPPowerShellOnline/3.12.1908.1/SharePointPnPPowerShellOnline.psd1 -WarningAction SilentlyContinue');        
         // ps.addCommand('Import-Module D:/Home/site/wwwroot/modules/SharePointPnPPowerShellOnline/SharePointPnPPowerShellOnline.psd1 -WarningAction SilentlyContinue');
         ps.addCommand('$progressPreference = "silentlyContinue"');
+        
+        // Connect to site
         ps.addCommand(`Connect-PnPOnline -AppId ${process.env.spId} -AppSecret ${process.env.spSecret} -Url ${inputs.siteUrl}`);
         ps.addCommand('$Site = Get-PnPSite');
         let output = await ps.invoke();
-        context.log(`Connected to site ${output}`);
-        context.log("Applying provisioning template");
-
+        
+        // Apply provisioning template
         ps.addCommand(`Apply-PnPProvisioningTemplate -Path C:/Users/sagren/dev/sps/Azure/FunctionApp/${inputs.siteType}-lists.xml`);
         // ps.addCommand(`Apply-PnPProvisioningTemplate -Path D:/home/site/wwwroot/FunctionApp/${inputs.siteType}-lists.xml`);
         
         output = await ps.invoke();
         context.log(output);
         
+        // Emit update
         service.emitUpdate(false, "Successfully created lists", room, socket, conversationId);
 
         return "Created lists";
 
     } catch (err) {
-        context.log(err);
+        context.log(err.message);
         await ps.dispose();
 
-        return `Created lists at: ${context.bindings.siteUrl}`;
+        return err.message;
     }
 
 };

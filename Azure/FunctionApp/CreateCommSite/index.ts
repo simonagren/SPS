@@ -20,29 +20,34 @@ const activityFunction: AzureFunction = async function (context: Context, queueO
 
     try {
 
+        // Emit update
         service.emitUpdate(false, `Creating a ${inputs.siteType} site`, room, socket, conversationId);
 
-        ps.addCommand('Import-Module C:/Users/sagren/Desktop/SharePointPnPPowerShellOnline/3.12.1908.1/SharePointPnPPowerShellOnline.psd1 -WarningAction SilentlyContinue');
+        // Import module
+        ps.addCommand('Import-Module C:/Users/sagren/dev/sps/azure/FunctionApp/SharePointPnPPowerShellOnline/3.12.1908.1/SharePointPnPPowerShellOnline.psd1 -WarningAction SilentlyContinue');
         // ps.addCommand('Import-Module D:/Home/site/wwwroot/modules/SharePointPnPPowerShellOnline/SharePointPnPPowerShellOnline.psd1 -WarningAction SilentlyContinue');
         ps.addCommand('$progressPreference = "silentlyContinue"');
 
+        // Connect to site
         ps.addCommand(`$encpassword = convertto-securestring -String ${process.env.adminPass} -AsPlainText -Force`);
         ps.addCommand(`$cred = new-object -typename System.Management.Automation.PSCredential -argumentlist ${process.env.adminUser}, $encpassword`)
         ps.addCommand(`Connect-PnPOnline -credentials $cred -Url ${process.env.spAdminUrl}`);
         let output = await ps.invoke();
-        context.log(`Connected to site ${output}`);
+        
+        // Create new communication site
         ps.addCommand(`New-PnPSite -Type CommunicationSite -Title ${inputs.siteTitle} -Url ${inputs.siteUrl} -Lcid 1033`);
         output = await ps.invoke();
 
+        // Emit Update
         service.emitUpdate(false, "Successfully created the site", room, socket, conversationId);
 
         return "Created communication site";
 
     } catch (err) {
-        context.log(err);
+        context.log(err.message);
         await ps.dispose();
 
-        return `Created lists at: ${context.bindings.siteUrl}`;
+        return err.message;
     }
 
 };
